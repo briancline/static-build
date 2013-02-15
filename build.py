@@ -151,7 +151,7 @@ def set_memcache_key(version, target_uri):
         key_name = config_val('output', config_key)
         if key_name:
             log('Setting memcache key %s to %s' % (key_name, value))
-            cache.set(key_name, version)
+            cache.set(key_name, value)
 
 
 def set_redis_key(version, target_uri):
@@ -169,7 +169,7 @@ def set_redis_key(version, target_uri):
         key_name = config_val('output', config_key)
         if key_name:
             log('Setting redis key %s to %s' % (key_name, value))
-            cache.set(key_name, version)
+            cache.set(key_name, value)
 
 
 def write_files(version, target_uri):
